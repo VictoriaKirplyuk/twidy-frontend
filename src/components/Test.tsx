@@ -1,11 +1,10 @@
-import styles from "./Test.module.scss"
-
-const Test = () => {
-    return (
-        <div className={styles.test}>
-            First test block
-        </div>
-    );
-};
+function Test() {
+  return (
+    <div>
+      First test block
+      <div>Test</div>
+    </div>
+  );
+}
 
 export default Test;

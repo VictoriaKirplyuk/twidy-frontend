@@ -1,4 +1,6 @@
-export const RouteNames = {
-    DEFAULT: "/",
-    NOT_FOUND: "*",
-}
+const RouteNames = {
+  DEFAULT: "/",
+  NOT_FOUND: "*",
+};
+
+export default RouteNames;
