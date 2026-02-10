@@ -1,5 +1,5 @@
 import "../styles/index.scss";
-import { Test } from "./Test";
+import Test from "./Test";
 
 function App() {
   return (

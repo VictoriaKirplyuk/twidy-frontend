@@ -1,10 +1,10 @@
 import webpack from "webpack";
+import "webpack-dev-server";
 import { buildLoaders } from "./buildLoaders";
 import { buildResolvers } from "./buildResolvers";
 import { buildPlugins } from "./buildPlugins";
 import { buildDevServer } from "./buildDevServer";
 import { BuildOptions } from "./types/config";
-import "webpack-dev-server";
 
 export function buildWebpackConfig(
   options: BuildOptions,

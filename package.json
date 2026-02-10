@@ -1,7 +1,6 @@
 {
   "name": "twidy-sn",
   "version": "1.0.0",
-  "type": "module",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -26,7 +25,7 @@
   "devDependencies": {
     "@eslint/compat": "^2.0.2",
     "@eslint/js": "^9.39.2",
-    "@types/node": "^24.9.1",
+    "@types/node": "^24.10.12",
     "@types/react": "^19.2.6",
     "@types/react-dom": "^19.2.3",
     "@types/webpack": "^5.28.5",
