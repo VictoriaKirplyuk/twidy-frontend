@@ -8,6 +8,7 @@ interface IRouter {
   element: ReactElement;
 }
 
+// Разделить routes на default (доступные до регистрации) и routes доступные после.
 const router: IRouter[] = [
   { path: RouteNames.DEFAULT, element: <App /> },
   { path: RouteNames.NOT_FOUND, element: <NotFound /> },

@@ -1,6 +1,6 @@
-const RouteNames = {
-  DEFAULT: "/",
-  NOT_FOUND: "*",
-};
+enum RouteNames {
+  DEFAULT = "/",
+  NOT_FOUND = "*",
+}
 
 export default RouteNames;
