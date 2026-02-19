@@ -1,12 +1,16 @@
-import { useContext } from "react";
-import Test from "./Test";
 import {
   LOCAL_STORAGE_THEME_KEY,
   ThemeContext,
   Themes,
-} from "../theme/ThemeContext";
+} from "shared/config/theme/ThemeContext";
+import { useContext } from "react";
 
-function App() {
+interface UseThemeResult {
+  theme: Themes;
+  toggleTheme: () => void;
+}
+
+export const useTheme = (): UseThemeResult => {
   const { theme, setTheme } = useContext(ThemeContext);
 
   const toggleTheme = () => {
@@ -15,14 +19,5 @@ function App() {
     localStorage.setItem(LOCAL_STORAGE_THEME_KEY, nextTheme);
   };
 
-  return (
-    <div className={`app ${theme}`}>
-      <button type="button" onClick={toggleTheme}>
-        Change theme
-      </button>
-      <Test />
-    </div>
-  );
-}
-
-export default App;
+  return { theme, toggleTheme };
+};

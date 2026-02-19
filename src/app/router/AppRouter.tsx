@@ -1,8 +1,8 @@
 import { ReactElement } from "react";
 import { Route, Routes } from "react-router";
-import router from "../router/router";
+import { router } from "app/router/router";
 
-function AppRouter(): ReactElement {
+export function AppRouter(): ReactElement {
   return (
     <Routes>
       {router.map(({ path, element }) => (
@@ -11,5 +11,3 @@ function AppRouter(): ReactElement {
     </Routes>
   );
 }
-
-export default AppRouter;
