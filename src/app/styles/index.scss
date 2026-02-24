@@ -5,18 +5,13 @@
 
 * {
   box-sizing: border-box;
-}
-
-:root, html, body {
-  height: 100%;
   margin: 0;
   padding: 0;
 }
 
 .app {
+  // the main block for app
   background: var(--bg-color);
-  border: 3px solid yellow;
   color: var(--primary-color);
   font: var(--font-m);
-  min-height: 100vh;
 }

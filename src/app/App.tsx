@@ -1,16 +1,13 @@
-import Test from "pages/Test/ui/Test";
 import { classNames } from "shared/lib/classNames/classNames";
-import { useTheme } from "app/providers/ThemeProvider";
+import { useTheme } from "shared/providers";
+import { AppRouter } from "app/router/AppRouter";
 
 export function App() {
-  const { theme, toggleTheme } = useTheme();
+  const { theme } = useTheme();
 
   return (
     <div className={classNames("app", {}, [theme])}>
-      <button type="button" onClick={toggleTheme}>
-        Change theme
-      </button>
-      <Test />
+      <AppRouter />
     </div>
   );
 }

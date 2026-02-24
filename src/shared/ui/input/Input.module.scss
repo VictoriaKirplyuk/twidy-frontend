@@ -1,0 +1,53 @@
+.label {
+  background: var(--bg-color);
+  border: 1.5px solid var(--tertiary-color);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  position: relative;
+
+  .input {
+    background: inherit;
+    border: none;
+    color: var(--primary-color);
+    outline: none;
+    width: 100%;
+  }
+
+  .plholder {
+    color: var(--tertiary-color);
+    left: .5em;
+    position: absolute;
+    top: .5em;
+    transition: 0.3s ease-in-out;
+  }
+
+  .input:focus + .plholder,
+  .input:not(:placeholder-shown) + .plholder {
+    color: var(--primary-color);
+    font-size: 15px;
+    left: .5em;
+    top: -1.5em;
+  }
+
+  .plholder.error,
+  .input:focus + .plholder.error,
+  .input:not(:placeholder-shown) + .plholder.error {
+    color: var(--error-color);
+  }
+
+  &:hover, &:focus-within {
+    border: 1.5px solid var(--primary-color);
+  }
+}
+
+.label.error {
+  border: 1.5px solid var(--error-color);
+  color: var(--error-color);
+}
+
+.error_message {
+  color: var(--error-color);
+  text-overflow: ellipsis;
+}

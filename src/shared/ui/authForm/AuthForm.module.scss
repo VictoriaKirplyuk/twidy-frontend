@@ -1,0 +1,38 @@
+.form_container {
+  background-color: var(--bg-color);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px 0 rgb(0 0 0 / 30%);
+  color: var(--tertiary-color);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 40px;
+
+  .form_header {
+    align-items: center;
+    display: flex;
+    font-size: 30px;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 400px;
+
+    .message {
+      text-transform: uppercase;
+    }
+  }
+}
+
+@media screen and (width <= 415px) {
+  .form_container {
+    overflow: hidden;
+    width: 100%;
+
+    form {
+      width: 100%;
+    }
+  }
+}

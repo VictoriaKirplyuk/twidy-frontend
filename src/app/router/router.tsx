@@ -1,7 +1,7 @@
 import { ReactElement } from "react";
-import NotFound from "pages/NotFound/ui/NotFound";
-import { App } from "app/App";
-import { RouteNames } from "app/router/enums/RouteNames";
+import { RouteNames } from "shared/constants/RouteNames";
+import { NotFound } from "pages/NotFound";
+import { Registration } from "pages/registration/ui/Registration";
 
 interface IRouter {
   path: string;
@@ -10,6 +10,7 @@ interface IRouter {
 
 // Разделить routes на default (доступные до регистрации) и routes доступные после.
 export const router: IRouter[] = [
-  { path: RouteNames.DEFAULT, element: <App /> },
+  { path: RouteNames.DEFAULT, element: <Registration /> },
   { path: RouteNames.NOT_FOUND, element: <NotFound /> },
+  { path: RouteNames.SIGN_UP, element: <Registration /> },
 ];

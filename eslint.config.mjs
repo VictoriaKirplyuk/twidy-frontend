@@ -76,6 +76,7 @@ const overrideConfig = defineConfig([
     files: ["**/*.jsx", "**/*.tsx", "**/*.js", "**/*.ts", "**/*.mjs"],
     rules: {
       "react/react-in-jsx-scope": "off",
+      "react/require-default-props": "off",
     },
   },
 ]);
