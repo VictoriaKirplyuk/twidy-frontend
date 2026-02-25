@@ -5,7 +5,7 @@ import styles from "./AuthForm.module.scss";
 interface IAuthForm {
   title: string;
   message?: string;
-  children?: ReactNode;
+  children: ReactNode;
 }
 
 export function AuthForm({ title, message, children }: IAuthForm) {

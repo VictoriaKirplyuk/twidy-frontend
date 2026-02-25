@@ -1,4 +1,4 @@
-import styles from "shared/ui/footer/Footer.module.scss";
+import styles from "widgets/footer/ui/Footer.module.scss";
 
 export function Footer() {
   return (

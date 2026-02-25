@@ -1,4 +1,4 @@
-import styles from "shared/ui/header/Header.module.scss";
+import styles from "widgets/header/ui/Header.module.scss";
 import { ThemeButton } from "shared/ui/buttons/ChangeThemeButton/ThemeButton";
 
 export function Header() {

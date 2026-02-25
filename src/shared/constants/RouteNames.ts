@@ -1,6 +1,7 @@
 export enum RouteNames {
   DEFAULT = "/",
-  SIGN_IN = "/sing-in",
-  SIGN_UP = "/signup",
+  LOGIN = "/login",
+  REGISTER = "/registration",
+  FORGOT_PASSWORD = "/forgot-password",
   NOT_FOUND = "*",
 }
