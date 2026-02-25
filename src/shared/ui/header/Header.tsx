@@ -1,14 +1,10 @@
-import { useTheme } from "shared/providers";
 import styles from "shared/ui/header/Header.module.scss";
+import { ThemeButton } from "shared/ui/buttons/ChangeThemeButton/ThemeButton";
 
 export function Header() {
-  const { toggleTheme } = useTheme();
-
   return (
     <header className={styles.header}>
-      <button type="button" onClick={toggleTheme}>
-        Change theme
-      </button>
+      <ThemeButton />
     </header>
   );
 }

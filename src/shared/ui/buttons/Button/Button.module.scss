@@ -1,0 +1,22 @@
+.btn {
+  background: var(--btn-bg-color);
+  border: none;
+  color: var(--btn-color);
+  cursor: pointer;
+  padding: 0.5rem;
+
+  &:hover {
+    background: var(--btn-hover-bg-color);
+    color: var(--btn-hover-color);
+  }
+
+  &:active {
+    background: var(--btn-active-bg-color);
+    color: var(--btn-active-color);
+  }
+
+  &:disabled {
+    background: var(--btn-disabled-bg-color);
+    color: var(--btn-disabled-color);
+  }
+}

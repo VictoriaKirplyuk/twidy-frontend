@@ -4,4 +4,17 @@
   --secondary-color: #8C8CB6;
   --tertiary-color: #8774bc;
   --error-color: #FF3B30;
+
+  // buttons colors
+  --btn-bg-color: #8C8CB6; // default
+  --btn-color: #2d2149;
+  --btn-hover-bg-color: #8787b1; // hover
+  --btn-hover-color: #372857;
+  --btn-active-bg-color: #75759c; // active
+  --btn-active-color: #261B3EFF;
+  --btn-disabled-bg-color: #8C8CB6; // disabled
+  --btn-disabled-color: #846dc3;
+
+  // theme buttons color
+  --btn-change-theme-color: #261B3EFF;
 }
