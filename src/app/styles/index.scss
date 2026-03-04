@@ -9,9 +9,23 @@
   padding: 0;
 }
 
+// the main block for app
 .app {
-  // the main block for app
   background: var(--bg-color);
   color: var(--primary-color);
   font: var(--font-m);
+}
+
+// input styles for autocomplete
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+  box-shadow: 0 0 0 1000px #120e26 inset; /* for background */
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+/* Изменяем цвет текста */
+input:-webkit-autofill {
+  -webkit-text-fill-color: #fff !important; /* for text */
+  transition: background-color 600000s ease-in-out 0s;
 }

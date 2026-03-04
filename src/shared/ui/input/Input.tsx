@@ -1,26 +1,34 @@
 import styles from "shared/ui/input/Input.module.scss";
-import { InputHTMLAttributes, useId } from "react";
+import { InputHTMLAttributes, Ref, useId } from "react";
 import { classNames } from "shared/lib/classNames/classNames";
 
 interface IInput extends InputHTMLAttributes<HTMLInputElement> {
   label?: string;
   errorMessage?: string;
   placeholder?: string;
+  inputRef?: Ref<HTMLInputElement>;
 }
 
-export function Input({ label, errorMessage, placeholder, ...rest }: IInput) {
+export function Input({
+  label,
+  errorMessage,
+  placeholder,
+  inputRef,
+  ...rest
+}: IInput) {
   const inputId = useId();
-  const hasError = Boolean(errorMessage);
-  const errorStyle = hasError && styles.error;
+  const isError = Boolean(errorMessage);
+  const errorStyle = isError && styles.error;
 
   return (
-    <div>
+    <div className={styles.main}>
       <label
         htmlFor={inputId}
         className={classNames(styles.label, {}, [errorStyle])}
       >
         <input
           id={inputId}
+          ref={inputRef && inputRef}
           aria-label={label || placeholder}
           className={styles.input}
           {...rest}
@@ -32,7 +40,7 @@ export function Input({ label, errorMessage, placeholder, ...rest }: IInput) {
           </span>
         )}
       </label>
-      <span className={styles.errorMessage}>{hasError && errorMessage}</span>
+      <span className={styles.errorMessage}>{isError && errorMessage}</span>
     </div>
   );
 }

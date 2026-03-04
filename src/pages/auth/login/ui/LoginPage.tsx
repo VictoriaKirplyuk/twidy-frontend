@@ -1,10 +1,10 @@
-import { RegisterForm } from "features/register/RegisterForm";
 import { AuthLayout } from "shared/ui/layouts/authLayout/AuthLayout";
+import { LoginForm } from "features/LoginForm";
 
-export function RegisterPage() {
+export function LoginPage() {
   return (
     <AuthLayout>
-      <RegisterForm />
+      <LoginForm />
     </AuthLayout>
   );
 }

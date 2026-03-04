@@ -1,7 +1,7 @@
 import { ReactElement } from "react";
 import { RouteNames } from "shared/constants/RouteNames";
 import { RegisterPage } from "pages/auth/register/ui/RegisterPage";
-import { LoginPage } from "pages/auth/login/LoginPage";
+import { LoginPage } from "pages/auth/login/ui/LoginPage";
 import { ForgotPasswordPage } from "pages/auth/forgot-password/ForgotPasswordPage";
 import { NotFoundPage } from "pages/notFound";
 

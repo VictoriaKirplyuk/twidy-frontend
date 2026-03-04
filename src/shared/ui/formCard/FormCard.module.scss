@@ -5,26 +5,32 @@
   color: var(--tertiary-color);
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 2rem;
   padding: 40px;
+  width: 35rem;
 
   .form_header {
-    align-items: center;
     display: flex;
-    font-size: 30px;
-    gap: 0.5rem;
+    flex-direction: column;
+    gap: .5rem;
+    text-wrap: wrap;
+
+    .header-title {
+      align-items: center;
+      display: flex;
+      gap: .5rem;
+    }
+
+    .header-message {
+      text-align: left;
+      text-transform: uppercase;
+    }
   }
 
   form {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
-    width: 400px;
-
-    .message {
-      text-align: left;
-      text-transform: uppercase;
-    }
+    gap: 1rem;
   }
 }
 
