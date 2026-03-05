@@ -1,8 +1,10 @@
 .checkboxOutline {
-  // border: 1px solid #0c0707;
+  align-items: center;
+  display: flex;
+  gap: .3rem;
+  justify-content: flex-start;
 
   input[type="checkbox"] {
-    appearance: none;
     appearance: none;
     background-color: var(--checkbox-default-bg-color);
     border: .1rem solid var(--checkbox-default-border-color);

@@ -7,6 +7,7 @@
     "start": "webpack serve --env port=3000",
     "build:prod": "webpack --env mode=production",
     "build:dev": "webpack --env mode=development",
+    "tsc:check": "tsc --noEmit",
     "lint": "eslint src/**/*.ts{,x} --fix",
     "lint:nofix": "eslint src/**/*.ts{,x}",
     "prettier": "prettier src/**/*.ts{,x} --write",
@@ -15,9 +16,14 @@
     "prepare": "husky"
   },
   "lint-staged": {
-    "*.{ts,tsx}": "eslint src/**/*.ts{,x} --fix",
-    "*.{ts,tsx, css, scss, json, jsm,html}": "prettier --write",
-    "**/*.scss": "stylelint --fix"
+    "src/**/*.ts{,x}": [
+      "eslint --fix",
+      "prettier --write",
+      "tsc-files --noEmit"
+    ],
+    "src/**/*.scss": [
+      "stylelint --fix"
+    ]
   },
   "keywords": [],
   "author": "",
@@ -50,6 +56,7 @@
     "stylelint-order": "^7.0.1",
     "ts-loader": "^9.5.4",
     "ts-node": "^10.9.2",
+    "tsc-files": "^1.1.4",
     "typescript": "^5.9.3",
     "webpack": "^5.102.1",
     "webpack-cli": "^6.0.1",

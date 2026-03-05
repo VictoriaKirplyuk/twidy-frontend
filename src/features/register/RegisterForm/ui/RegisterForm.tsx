@@ -23,8 +23,8 @@ export function RegisterForm() {
     console.log(data);
   };
 
-  console.log(watch("emailOrPhone"));
-  console.log(errors);
+  // console.log(watch("emailOrPhone"));
+  // console.log(errors);
 
   return (
     <FormCard

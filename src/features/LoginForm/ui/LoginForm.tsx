@@ -22,9 +22,6 @@ export function LoginForm() {
     console.log(data);
   };
 
-  console.log(watch("emailOrPhone"));
-  console.log(errors);
-
   return (
     <FormCard title="Вход" message="Войдите в аккаунт twidy">
       <form onSubmit={handleSubmit(onSubmit)}>
@@ -39,7 +36,7 @@ export function LoginForm() {
           {...register("password")}
           errorMessage={errors.password?.message}
         />
-        <Checkbox title="Запомнить меня" />
+        <Checkbox title="Запомнить меня" {...register("rememberMe")} />
         <Button type="submit">Войти</Button>
       </form>
     </FormCard>
