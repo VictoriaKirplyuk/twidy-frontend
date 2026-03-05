@@ -8,7 +8,9 @@ interface IAuthForm {
   children: ReactNode;
 }
 
-export function FormCard({ title, message, children }: IAuthForm) {
+export function FormCard(props: IAuthForm) {
+  const { title, message, children } = props;
+
   return (
     <div className={styles.formContainer}>
       <div className={styles.formHeader}>

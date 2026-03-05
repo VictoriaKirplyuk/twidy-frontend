@@ -6,12 +6,9 @@ interface IButton extends ButtonHTMLAttributes<HTMLButtonElement> {
   children: ReactNode;
 }
 
-export function Button({
-  type = "button",
-  isLoading,
-  children,
-  ...rest
-}: IButton) {
+export function Button(props: IButton) {
+  const { type = "button", isLoading, children, ...rest } = props;
+
   return (
     /* eslint-disable react/button-has-type */
     <button className={styles.btn} type={type} disabled={isLoading} {...rest}>

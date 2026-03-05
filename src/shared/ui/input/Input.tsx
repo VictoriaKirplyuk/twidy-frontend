@@ -9,13 +9,9 @@ interface IInput extends InputHTMLAttributes<HTMLInputElement> {
   inputRef?: Ref<HTMLInputElement>;
 }
 
-export function Input({
-  label,
-  errorMessage,
-  placeholder,
-  inputRef,
-  ...rest
-}: IInput) {
+export function Input(props: IInput) {
+  const { label, errorMessage, placeholder, inputRef, ...rest } = props;
+
   const inputId = useId();
   const isError = Boolean(errorMessage);
   const errorStyle = isError && styles.error;
@@ -28,7 +24,7 @@ export function Input({
       >
         <input
           id={inputId}
-          ref={inputRef && inputRef}
+          ref={inputRef}
           aria-label={label || placeholder}
           className={styles.input}
           {...rest}

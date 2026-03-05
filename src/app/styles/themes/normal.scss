@@ -17,4 +17,16 @@
 
   // theme buttons color
   --btn-change-theme-color: #261B3EFF;
+
+  // input autocomplete colors
+  --autocomplete-background-input-color: #fff;
+  --autocomplete-input-color: #0F0E17;
+
+  // checkbox colors
+  --checkbox-default-border-color: #8774bc; // default
+  --checkbox-default-bg-color: #fff;
+  --checkbox-checked-color: #75759c; // checked
+  --checkbox-hover-border-color: #372857; // hover
+  --checkbox-focus-border-color: #372857; // focus
+  --checkbox-focus-shadow-color: rgb(55 40 87 / 25%)
 }

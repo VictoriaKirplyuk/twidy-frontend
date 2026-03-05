@@ -4,6 +4,7 @@ import { FormCard } from "shared/ui/formCard/FormCard";
 import { Input } from "shared/ui/input/Input";
 import { Button } from "shared/ui/buttons/Button/Button";
 import { loginShema } from "features/LoginForm/model/loginShema";
+import { Checkbox } from "shared/ui/checkbox/Checkbox";
 
 export function LoginForm() {
   const {
@@ -38,6 +39,7 @@ export function LoginForm() {
           {...register("password")}
           errorMessage={errors.password?.message}
         />
+        <Checkbox title="Запомнить меня" />
         <Button type="submit">Войти</Button>
       </form>
     </FormCard>
