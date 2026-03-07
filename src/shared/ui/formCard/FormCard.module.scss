@@ -7,7 +7,6 @@
   flex-direction: column;
   gap: 2rem;
   padding: 40px;
-  width: 35rem;
 
   .form_header {
     display: flex;
@@ -23,7 +22,6 @@
 
     .header-message {
       text-align: left;
-      text-transform: uppercase;
     }
   }
 
@@ -34,8 +32,9 @@
   }
 }
 
-@media screen and (width <= 415px) {
+@media screen and (width <= 540px) {
   .form_container {
+    box-shadow: none;
     overflow: hidden;
     width: 100%;
 

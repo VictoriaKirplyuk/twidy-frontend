@@ -1,14 +1,13 @@
 .page {
   // border: 3px solid red;
   display: grid;
-  grid-template-rows: 7% 1fr 7%;
-  height: 100dvh;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100dvh;
 
   .main_content {
     align-items: center;
 
     // the main wrapper for the middle of page
-    // border: 3px solid #efdf33;
     display: flex;
     justify-content: center;
   }

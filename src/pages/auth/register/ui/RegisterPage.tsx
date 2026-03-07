@@ -3,7 +3,7 @@ import { RegisterDataForm } from "features/register/RegisterDataForm";
 
 export function RegisterPage() {
   return (
-    <AuthLayout>
+    <AuthLayout isWelcomeContent={false}>
       <RegisterDataForm />
       {/* <RegisterCodeForm /> */}
       {/* <RegisterForm /> */}

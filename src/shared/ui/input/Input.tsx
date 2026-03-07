@@ -1,6 +1,6 @@
-import styles from "shared/ui/input/Input.module.scss";
 import { InputHTMLAttributes, Ref, useId } from "react";
 import { classNames } from "shared/lib/classNames/classNames";
+import styles from "./Input.module.scss";
 
 interface IInput extends InputHTMLAttributes<HTMLInputElement> {
   label?: string;

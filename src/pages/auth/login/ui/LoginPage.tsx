@@ -3,7 +3,7 @@ import { LoginForm } from "features/LoginForm";
 
 export function LoginPage() {
   return (
-    <AuthLayout>
+    <AuthLayout isWelcomeContent>
       <LoginForm />
     </AuthLayout>
   );

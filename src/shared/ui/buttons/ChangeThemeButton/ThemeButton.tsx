@@ -1,6 +1,6 @@
-import styles from "shared/ui/buttons/ChangeThemeButton/ThemeButton.module.scss";
 import Icon from "shared/ui/buttons/ChangeThemeButton/themeIcon.svg";
 import { useTheme } from "shared/providers";
+import styles from "./ThemeButton.module.scss";
 
 export function ThemeButton() {
   const { toggleTheme } = useTheme();

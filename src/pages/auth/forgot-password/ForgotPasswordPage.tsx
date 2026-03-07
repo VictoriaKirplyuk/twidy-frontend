@@ -5,7 +5,7 @@ import { Button } from "shared/ui/buttons/Button/Button";
 
 export function ForgotPasswordPage() {
   return (
-    <AuthLayout>
+    <AuthLayout isWelcomeContent={false}>
       <FormCard
         title="Поиск аккаунта"
         message="Введите свой номер мобильного телефона или электронный адрес"

@@ -1,5 +1,5 @@
-import styles from "shared/ui/buttons/Button/Button.module.scss";
 import { ButtonHTMLAttributes, ReactNode } from "react";
+import styles from "./Button.module.scss";
 
 interface IButton extends ButtonHTMLAttributes<HTMLButtonElement> {
   isLoading?: boolean;

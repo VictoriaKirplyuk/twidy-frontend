@@ -5,6 +5,7 @@ import { Input } from "shared/ui/input/Input";
 import { Button } from "shared/ui/buttons/Button/Button";
 import { loginShema } from "features/LoginForm/model/loginShema";
 import { Checkbox } from "shared/ui/checkbox/Checkbox";
+import styles from "./LoginForm.module.scss";
 
 export function LoginForm() {
   const {
@@ -25,17 +26,19 @@ export function LoginForm() {
   return (
     <FormCard title="Вход" message="Войдите в аккаунт twidy">
       <form onSubmit={handleSubmit(onSubmit)}>
-        <Input
-          placeholder="Номер телефона или электронный адрес"
-          {...register("emailOrPhone")}
-          errorMessage={errors.emailOrPhone?.message}
-        />
-        <Input
-          placeholder="Пароль"
-          type="password"
-          {...register("password")}
-          errorMessage={errors.password?.message}
-        />
+        <div className={styles.fieldList}>
+          <Input
+            placeholder="Номер телефона или электронный адрес"
+            {...register("emailOrPhone")}
+            errorMessage={errors.emailOrPhone?.message}
+          />
+          <Input
+            placeholder="Пароль"
+            type="password"
+            {...register("password")}
+            errorMessage={errors.password?.message}
+          />
+        </div>
         <Checkbox title="Запомнить меня" {...register("rememberMe")} />
         <Button type="submit">Войти</Button>
       </form>

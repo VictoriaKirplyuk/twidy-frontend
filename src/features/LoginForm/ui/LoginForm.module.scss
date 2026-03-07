@@ -1,0 +1,12 @@
+.field-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 25rem;
+}
+
+@media screen and (width <= 540px) {
+  .field-list {
+    width: 100%
+  }
+}

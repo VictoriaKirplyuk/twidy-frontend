@@ -1,5 +1,5 @@
-import styles from "shared/ui/checkbox/Checkbox.module.scss";
 import { InputHTMLAttributes, Ref } from "react";
+import styles from "./Checkbox.module.scss";
 
 interface ICheckbox extends Omit<
   InputHTMLAttributes<HTMLInputElement>,
