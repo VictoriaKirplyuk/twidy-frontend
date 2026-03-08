@@ -6,7 +6,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 
 const registerCodeShema = yup.object({
-  code: yup.string().required(),
+  code: yup.string().required("Обязательное поле"),
 });
 
 export function RegisterCodeForm() {

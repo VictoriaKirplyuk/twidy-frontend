@@ -13,6 +13,7 @@ export function Input(props: IInput) {
   const { label, errorMessage, placeholder, inputRef, ...rest } = props;
 
   const inputId = useId();
+  const errorId = `${inputId}-error`;
   const isError = Boolean(errorMessage);
   const errorStyle = isError && styles.error;
 
@@ -29,6 +30,8 @@ export function Input(props: IInput) {
           className={styles.input}
           {...rest}
           placeholder=" "
+          aria-invalid={isError}
+          aria-describedby={isError ? errorId : undefined}
         />
         {placeholder && (
           <span className={classNames(styles.plholder, {}, [errorStyle])}>
@@ -36,7 +39,9 @@ export function Input(props: IInput) {
           </span>
         )}
       </label>
-      <span className={styles.errorMessage}>{isError && errorMessage}</span>
+      <span id={errorId} className={styles.errorMessage} aria-live="assertive">
+        {isError && errorMessage}
+      </span>
     </div>
   );
 }

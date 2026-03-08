@@ -3,6 +3,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { FormCard } from "shared/ui/formCard/FormCard";
 import { Input } from "shared/ui/input/Input";
 import { Button } from "shared/ui/buttons/Button/Button";
+import { Select } from "shared/ui/select/Select";
 import { registerDataShema } from "../model/registerDataShema";
 import styles from "./RegisterDataForm.module.scss";
 
@@ -60,10 +61,10 @@ export function RegisterDataForm() {
               {...register("secondName")}
               errorMessage={errors.secondName?.message}
             />
-            <Input
-              placeholder="Гендер"
-              {...register("gender")}
-              errorMessage={errors.gender?.message}
+            <Select
+              label="Гендер"
+              options={["Male", "Female", "Other"]}
+              required
             />
             <Input
               placeholder="Дата рождения"
