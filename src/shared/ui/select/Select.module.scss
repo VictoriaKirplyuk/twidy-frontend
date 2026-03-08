@@ -1,0 +1,24 @@
+.select-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: .2rem;
+
+  .select {
+    background-color: inherit;
+    border: 1.5px solid var(--select-default-border-color);
+    border-radius: 10px;
+    color: var(--select-default-text-color);
+    cursor: pointer;
+    padding: 10px 10px 10px 5px; // сверху справа снизу слева
+    width: 100%;
+
+    &:focus {
+      outline: 1.5px solid var(--select-focus-bg-color);
+    }
+
+    &:disabled {
+      cursor: not-allowed;
+      opacity: 0.7;
+    }
+  }
+}

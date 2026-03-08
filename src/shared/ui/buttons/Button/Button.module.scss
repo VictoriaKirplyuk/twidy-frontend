@@ -18,5 +18,7 @@
   &:disabled {
     background: var(--btn-disabled-bg-color);
     color: var(--btn-disabled-color);
+    cursor: not-allowed;
+    filter: brightness(70%)
   }
 }

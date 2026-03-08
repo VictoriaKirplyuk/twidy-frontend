@@ -3,7 +3,6 @@
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 
   .label {
-    background: var(--bg-color);
     border: 1.5px solid var(--tertiary-color);
     border-radius: 10px;
     display: flex;
@@ -17,6 +16,15 @@
       color: var(--primary-color);
       outline: none;
       width: 100%;
+
+      &:disabled {
+        cursor: not-allowed;
+      }
+
+      &:invalid {
+        box-shadow: none;
+      }
+
     }
 
     .plholder {
@@ -29,14 +37,12 @@
 
     .input:focus + .plholder,
     .input:not(:placeholder-shown) + .plholder {
+      background-color: var(--bg-color);
       color: var(--primary-color);
       font-size: 15px;
       left: .5em;
-      top: -1.5em;
-    }
-
-    input:invalid {
-      box-shadow: none;
+      top: -.9em;
+      z-index: 1;
     }
 
     .plholder.error,
@@ -45,7 +51,7 @@
       color: var(--error-color);
     }
 
-    &:hover, &:focus-within {
+    &:has(.input:not(:disabled)):hover, &:focus-within {
       border: 1.5px solid var(--primary-color);
     }
   }
@@ -54,6 +60,10 @@
     border: 1.5px solid var(--error-color);
     color: var(--error-color);
     transition: color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+  }
+
+  .label.disabled, .plholder.disabled {
+    opacity: 0.7;
   }
 
   .error_message {

@@ -60,11 +60,13 @@ export function RegisterDataForm() {
               placeholder="Фамилия"
               {...register("secondName")}
               errorMessage={errors.secondName?.message}
+              disabled
             />
             <Select
               label="Гендер"
               options={["Male", "Female", "Other"]}
               required
+              disabled
             />
             <Input
               placeholder="Дата рождения"
@@ -73,7 +75,9 @@ export function RegisterDataForm() {
             />
           </div>
         </div>
-        <Button type="submit">Продолжить</Button>
+        <Button type="submit" disabled>
+          Продолжить
+        </Button>
       </form>
     </FormCard>
   );
