@@ -9,7 +9,7 @@ export function buildLoaders({ isDev }: BuildOptions): webpack.RuleSetRule[] {
     exclude: /node_modules/,
   };
 
-  const cssLoader = {
+  const cssModuleLoader = {
     test: /\.s[ac]ss$/i,
     use: [
       isDev ? "style-loader" : MiniCssExtractPlugin.loader,
@@ -29,6 +29,25 @@ export function buildLoaders({ isDev }: BuildOptions): webpack.RuleSetRule[] {
     ],
   };
 
+  const cssLoader = {
+    test: /\.css$/i,
+    use: [
+      isDev ? "style-loader" : MiniCssExtractPlugin.loader,
+      {
+        loader: "css-loader",
+        options: {
+          modules: {
+            auto: /\.css$/,
+            localIdentName: isDev
+              ? "[path][name]__[local]--[hash:base64:5]"
+              : "[hash:base64:8]",
+            namedExport: false,
+          },
+        },
+      },
+    ],
+  };
+
   const svgLoader = {
     rules: [
       {
@@ -45,5 +64,22 @@ export function buildLoaders({ isDev }: BuildOptions): webpack.RuleSetRule[] {
     ],
   };
 
-  return [typescriptLoader, cssLoader, ...svgLoader.rules];
+  const warningLoader = {
+    rules: [
+      {
+        test: /[\\/]node_modules[\\/]react-datepicker[\\/]/,
+        parser: {
+          exprContextCritical: false,
+        },
+      },
+    ],
+  };
+
+  return [
+    typescriptLoader,
+    cssLoader,
+    cssModuleLoader,
+    ...svgLoader.rules,
+    ...warningLoader.rules,
+  ];
 }

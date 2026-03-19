@@ -3,7 +3,8 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { FormCard } from "shared/ui/formCard/FormCard";
 import { Input } from "shared/ui/input/Input";
 import { Button } from "shared/ui/buttons/Button/Button";
-import { Select } from "shared/ui/select/Select";
+import { CustomSelect } from "shared/ui/select/CustomSelect";
+import { CustomDatePicker } from "shared/ui/datePicker/CustomDatePicker";
 import { registerDataShema } from "../model/registerDataShema";
 import styles from "./RegisterDataForm.module.scss";
 
@@ -20,11 +21,15 @@ export function RegisterDataForm() {
   });
 
   const onSubmit = (data: any) => {
-    console.log(data);
+    // console.log(data);
+    // setValue
   };
 
-  // console.log(watch("emailOrPhone"));
-  // console.log(errors);
+  const options = [
+    { value: "MALE", label: "Мужчина" },
+    { value: "FEMALE", label: "Женщина" },
+    { value: "OTHERS", label: "Другое" },
+  ];
 
   return (
     <FormCard
@@ -60,24 +65,12 @@ export function RegisterDataForm() {
               placeholder="Фамилия"
               {...register("secondName")}
               errorMessage={errors.secondName?.message}
-              disabled
             />
-            <Select
-              label="Гендер"
-              options={["Male", "Female", "Other"]}
-              required
-              disabled
-            />
-            <Input
-              placeholder="Дата рождения"
-              {...register("birthDate")}
-              errorMessage={errors.birthDate?.message}
-            />
+            <CustomSelect options={options} />
+            <CustomDatePicker />
           </div>
         </div>
-        <Button type="submit" disabled>
-          Продолжить
-        </Button>
+        <Button type="submit">Продолжить</Button>
       </form>
     </FormCard>
   );

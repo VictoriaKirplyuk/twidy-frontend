@@ -5,6 +5,10 @@
   --tertiary-color: #8774bc;
   --error-color: #FF3B30;
 
+  // input colors
+  --input-shadow-color: rgb(78 63 111 / 50%);
+  --input-error-shadow-color: rgb(255 59 48 / 50%);
+
   // buttons colors
   --btn-bg-color: #8C8CB6; // default
   --btn-color: #2d2149;
@@ -31,6 +35,30 @@
   --checkbox-focus-shadow-color: rgb(55 40 87 / 25%);
 
   // select colors
-  --select-default-border-color: #8774bc;
-  --select-focus-bg-color: #4E3F6F;
+  --select-placeholder-color: #8774bc;
+  --select-single-value-color: #4E3F6F;
+  --select-control-border-color: #8774bc;
+  --select-shadow-color: rgb(78 63 111 / 50%);
+  --select-menu-list-bg-color: #E7E1FBFF;
+  --select-option-color: #4E3F6F;
+  --select-option-selected-color: #4E3F6F;
+  --select-option-selected-bg-color: #c8b8f3;
+  --select-option-focus-bg-color: #8774bc;
+  --select-option-focus-color: #e2d7fd;
+
+  // date-picker colors
+  --datepicker-bg-color: #fff;
+  --datepicker-header-bg-color: #8C8CB6;
+  --datepicker-current-month-color: #2d2149;
+  --datepicker-day-color: #2d2149;
+  --datepicker-day-keyboard-selected-bg-color: #d5d5f6;
+  --datepicker-day-selected-bg-color: #8C8CB6;
+  --datepicker-day-selected-color: #fff;
+  --datepicker-day-selected-hover-bg-color: #6f5a9f;
+  --datepicker-day-outside-month-color: #c3cad1;
+  --datepicker-navigation-icon-border-color: #d6dadf;
+  --datepicker-navigation-icon-hover-border-color: #ecf3ec;
+
+  // opacity for disabled states of elements
+  --element-disabled-color: 0.7;
 }

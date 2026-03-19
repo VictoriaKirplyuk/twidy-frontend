@@ -24,7 +24,6 @@
       &:invalid {
         box-shadow: none;
       }
-
     }
 
     .plholder {
@@ -32,7 +31,6 @@
       left: .5em;
       position: absolute;
       top: .5em;
-      transition: 0.3s ease-in-out;
     }
 
     .input:focus + .plholder,
@@ -52,7 +50,7 @@
     }
 
     &:has(.input:not(:disabled)):hover, &:focus-within {
-      border: 1.5px solid var(--primary-color);
+      box-shadow: 0 0 0 1px var(--input-shadow-color);
     }
   }
 
@@ -62,8 +60,14 @@
     transition: color 0.15s ease-in-out, border-color 0.15s ease-in-out;
   }
 
+  .label.error:hover,
+  .label.error:focus-within,
+  .label.error:has(.input:active) {
+    box-shadow: 0 0 0 1px var(--input-error-shadow-color) !important;
+  }
+
   .label.disabled, .plholder.disabled {
-    opacity: 0.7;
+    opacity: var(--element-disabled-color);
   }
 
   .error_message {

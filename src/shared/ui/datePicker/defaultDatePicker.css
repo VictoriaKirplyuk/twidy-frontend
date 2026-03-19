@@ -1,0 +1,46 @@
+.react-datepicker {
+    background-color: var(--datepicker-bg-color); /*default background календаря +++*/
+}
+
+/* Header */
+.react-datepicker .react-datepicker__header {
+    background-color: var(--datepicker-header-bg-color); /* цвет хэдера ++++*/
+}
+
+.react-datepicker__current-month {
+    color: var(--datepicker-current-month-color); /* текст в header ++++*/
+}
+
+.react-datepicker__day {
+    color: var(--datepicker-day-color); /*цифры в календаре - их цвет ++++ */
+}
+
+.react-datepicker__day--keyboard-selected {
+    background-color: var(--datepicker-day-keyboard-selected-bg-color); /* для переключения по датам +++ */
+}
+
+.react-datepicker__day--selected {
+    background-color: var(--datepicker-day-selected-bg-color); /*бэкграунд выбранной даты*/
+    color: var(--datepicker-day-selected-color); /*цвет цифры выбранной даты ++++*/
+}
+
+.react-datepicker__day--selected:hover, .react-datepicker__day--keyboard-selected:hover {
+    background-color: var(--datepicker-day-selected-hover-bg-color) !important;
+}
+
+.react-datepicker__day-names { /* пн вт ср */
+    font-weight: bold;
+}
+
+.react-datepicker__day--outside-month {
+    color: var(--datepicker-day-outside-month-color); /* цвет цифр дней не входящих в текущий месяц+++ */
+}
+
+.react-datepicker__navigation-icon::before {
+    border-color: var(--datepicker-navigation-icon-border-color); /* цвет стрелок +++ */
+    transition: border-color 0.2s; /* задержка для изменении цвета стрелок при наведении */
+}
+
+.react-datepicker__navigation:hover .react-datepicker__navigation-icon::before {
+    border-color: var(--datepicker-navigation-icon-hover-border-color); /* цвет стрелок при наведении +++ */
+}
