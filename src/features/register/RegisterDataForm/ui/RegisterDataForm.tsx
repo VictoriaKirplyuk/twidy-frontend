@@ -66,7 +66,7 @@ export function RegisterDataForm() {
               {...register("secondName")}
               errorMessage={errors.secondName?.message}
             />
-            <CustomSelect options={options} />
+            <CustomSelect options={options} placeholder="Гендер" />
             <CustomDatePicker />
           </div>
         </div>
