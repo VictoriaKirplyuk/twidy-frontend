@@ -8,26 +8,26 @@
   width: 100%;
 
   .input {
-    background-color: inherit;
-    border: 1.5px solid var(--tertiary-color);
+    background-color: var(--bg-surface);
+    border: 1.5px solid var(--border);
     border-radius: 10px;
-    color: var(--primary-color);
+    color: var(--text-dimmed);
     outline: none;
     padding: 10px;
     width: 100%;
 
     &::placeholder {
-      color: var(--tertiary-color);
+      color: var(--text-muted);
       transition: 0.3s ease-in-out;
     }
 
     &:hover, &:focus {
-      border: 1.5px solid var(--primary-color);
+      border-color: var(--accent);
     }
   }
 
   label {
-    color: var(--tertiary-color);
+    color: var(--text-dimmed);
     display: block;
     text-align: left;
   }

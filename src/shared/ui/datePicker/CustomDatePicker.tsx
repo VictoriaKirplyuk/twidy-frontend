@@ -1,9 +1,7 @@
 import { useRef, useState } from "react";
-import DatePicker, { registerLocale } from "react-datepicker";
+import DatePicker from "react-datepicker";
 import dayjs from "dayjs";
 import styles from "./CustomDatePicker.module.scss";
-
-registerLocale("ru", ru);
 
 interface ICustomDatePicker {
   placeholder?: string;

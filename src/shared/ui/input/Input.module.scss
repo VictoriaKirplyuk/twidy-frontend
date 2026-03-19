@@ -1,9 +1,9 @@
 .main {
   min-height: 4.5rem;
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 
   .label {
-    border: 1.5px solid var(--tertiary-color);
+    background-color: var(--bg-surface);
+    border: 1.5px solid var(--border);
     border-radius: 10px;
     display: flex;
     justify-content: center;
@@ -13,12 +13,13 @@
     .input {
       background: inherit;
       border: none;
-      color: var(--primary-color);
+      color: var(--text-dimmed);
       outline: none;
       width: 100%;
 
       &:disabled {
         cursor: not-allowed;
+        z-index: 1;
       }
 
       &:invalid {
@@ -27,53 +28,54 @@
     }
 
     .plholder {
-      color: var(--tertiary-color);
+      color: var(--text-muted);
       left: .5em;
       position: absolute;
       top: .5em;
+      transition: top 0.2s ease-in-out;
     }
 
     .input:focus + .plholder,
     .input:not(:placeholder-shown) + .plholder {
-      background-color: var(--bg-color);
-      color: var(--primary-color);
+      background-color: var(--bg-surface);
+      color: var(--text-dimmed);
       font-size: 15px;
       left: .5em;
       top: -.9em;
       z-index: 1;
     }
 
+    &:not(.error) {
+      &:has(.input:not(:disabled)):hover,
+      &:focus-within {
+        border-color: var(--accent);
+      }
+    }
+
     .plholder.error,
     .input:focus + .plholder.error,
     .input:not(:placeholder-shown) + .plholder.error {
-      color: var(--error-color);
-    }
-
-    &:has(.input:not(:disabled)):hover, &:focus-within {
-      box-shadow: 0 0 0 1px var(--input-shadow-color);
+      color: var(--error);
     }
   }
 
   .label.error {
-    border: 1.5px solid var(--error-color);
-    color: var(--error-color);
-    transition: color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+    border: 1.5px solid var(--error);
   }
 
   .label.error:hover,
   .label.error:focus-within,
   .label.error:has(.input:active) {
-    box-shadow: 0 0 0 1px var(--input-error-shadow-color) !important;
+    box-shadow: 0 0 0 1px var(--error-shadow);
   }
 
   .label.disabled, .plholder.disabled {
-    opacity: var(--element-disabled-color);
+    opacity: var(--disabled-opacity);
   }
 
   .error_message {
-    color: var(--error-color);
+    color: var(--text-error);
     min-height: 20px;
     text-overflow: ellipsis;
-    transition: color 0.15s ease-in-out;
   }
 }

@@ -8,14 +8,21 @@ interface ICheckbox extends Omit<
   title: string;
   type?: "checkbox";
   ref?: Ref<HTMLInputElement>;
+  disabled?: boolean;
 }
 
 export function Checkbox(props: ICheckbox) {
-  const { title, type = "checkbox", ref, ...rest } = props;
+  const { title, type = "checkbox", ref, disabled, ...rest } = props;
 
   return (
     <div className={styles.checkboxOutline}>
-      <input type={type} id="connection" ref={ref} {...rest} />
+      <input
+        type={type}
+        id="connection"
+        ref={ref}
+        disabled={disabled}
+        {...rest}
+      />
       <label htmlFor="connection">{title}</label>
     </div>
   );

@@ -1,8 +1,8 @@
 .form_container {
-  background-color: var(--bg-color);
+  background-color: var(--bg-surface);
   border-radius: 20px;
-  box-shadow: 0 8px 32px 0 rgb(0 0 0 / 30%);
-  color: var(--tertiary-color);
+  box-shadow: 0 8px 32px 0 var(--shadow);
+  color: var(--text-dimmed);
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -32,7 +32,7 @@
   }
 }
 
-@media screen and (width <= 540px) {
+@media screen and (width <= 700px) {
   .form_container {
     box-shadow: none;
     overflow: hidden;

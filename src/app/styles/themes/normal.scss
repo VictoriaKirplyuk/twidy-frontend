@@ -1,9 +1,34 @@
 .app.light {
+  // palette
+  --bg-main: #F2F2FE; /* Основной фон приложения */
+  --bg-surface: #FFF; /* Карточки, поля ввода, выпадающие списки */
+  --bg-elevated: #8C8CB6; /* Кнопки (default), активные элементы */
+
+  /* text roles */
+  --text-main: #1A1927; /* Основной текст, заголовки */
+  --text-dimmed: #4E3F6F; /* Обычный текст, описания, подписи, иконки, плейсхолдеры */
+  --text-muted: #8C8CB6; /* Третичный: даты, неактивные табы, подсказки */
+  --text-on-accent: #F2F2FE; /* Статичный: текст внутри кнопок */
+  --text-link: #4E3F6F; /* Ссылки (акцентный фиолетовый) */
+  --text-error: #D32F2F;
+
+  /* Accent and others */
+  --border: #D1D1E9; /* Границы элементов, чтобы они не «растекались» */
+  --accent: #8774BC; /* Главный акцент, чекбоксы, фокус */
+  --error: #FF3B30; /* Ошибки и деструктивные действия */
+  --shadow: rgb(78 63 111 / 10%); /* Плотная тень для разделения слоев */
+  --error-shadow: rgb(255 59 48 / 50%);
   --bg-color: #F2F2FE;
   --primary-color: #4E3F6F;
   --secondary-color: #8C8CB6;
   --tertiary-color: #8774bc;
   --error-color: #FF3B30;
+
+
+
+
+
+
 
   // input colors
   --input-shadow-color: rgb(78 63 111 / 50%);

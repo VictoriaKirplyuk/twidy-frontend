@@ -11,8 +11,8 @@
 
 // the main block for app
 .app {
-  background: var(--bg-color);
-  color: var(--primary-color);
+  background: var(--bg-main);
+  color: var(--text-main);
   font: var(--font-m);
 }
 
@@ -28,4 +28,12 @@ input:-webkit-autofill:focus {
 input:-webkit-autofill {
   -webkit-text-fill-color: var(--autocomplete-input-color) !important; /* for text */
   transition: background-color 600000s ease-in-out 0s;
+}
+
+h1 {
+  color: var(--text-main);
+}
+
+p {
+  color: var(--text-dimmed);
 }

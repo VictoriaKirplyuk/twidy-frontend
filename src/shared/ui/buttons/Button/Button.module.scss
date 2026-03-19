@@ -1,24 +1,22 @@
 .btn {
-  background: var(--btn-bg-color);
+  background-color: var(--bg-elevated);
   border: none;
-  color: var(--btn-color);
+  color: var(--text-on-accent);
   cursor: pointer;
+  font-weight: 500;
   padding: 0.5rem;
+  transition: background 0.2s, filter 0.1s;
 
   &:hover {
-    background: var(--btn-hover-bg-color);
-    color: var(--btn-hover-color);
+    filter: brightness(1.15);
   }
 
   &:active {
-    background: var(--btn-active-bg-color);
-    color: var(--btn-active-color);
+    filter: brightness(0.85);
   }
 
   &:disabled {
-    background: var(--btn-disabled-bg-color);
-    color: var(--btn-disabled-color);
     cursor: not-allowed;
-    filter: brightness(70%)
+    filter: brightness(var(--disabled-opacity));
   }
 }

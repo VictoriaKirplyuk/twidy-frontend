@@ -1,13 +1,10 @@
 .page {
-  // border: 3px solid red;
   display: grid;
   grid-template-rows: auto 1fr auto;
   min-height: 100dvh;
 
   .main_content {
     align-items: center;
-
-    // the main wrapper for the middle of page
     display: flex;
     justify-content: center;
   }
